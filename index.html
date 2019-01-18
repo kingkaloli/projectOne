@@ -14,8 +14,9 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Neighborhood Search</h1>
-            <p class="lead">Work in progress</p>
+            <h1 class="display-4">
+                <h1 class="text-center">Neighborhood Search</h1>
+            </h1>
         </div>
     </div>
     <!--Begin Form-->
@@ -27,9 +28,9 @@
                 <form>
                     <div class="form-group">
                         <label for="three">Seach Neighborhood</label>
-                        <input type="text" class="form-control" id="frequencyInput">
+                        <input type="text" class="form-control" id="mapInput">
                     </div>
-                    <button type="submit" class="btn btn-primary" id="addTrainBtn">Let's Roll</button>
+                    <button type="submit" class="btn btn-primary" id="addplaceBtn">Let's Roll</button>
                     </from>
             </div>
         </div>
@@ -37,7 +38,33 @@
             <form>
         </div>
     </div>
+    <!--End Form-->
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                    <h3>Places Searched here</h3>
+                    <div id="placesSearched"></div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Google Maps Here</h3>
+                <div id="map">
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                    <h3>Faves here</h3>
+                    <div id="favPlaces"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
+
+<!--The div element for the map -->
+<div id="map"></div>
