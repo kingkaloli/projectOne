@@ -22,21 +22,51 @@
     <!--Begin Form-->
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <form>
-                    <div class="form-group">
-                        <label for="three">Seach Neighborhood</label>
-                        <input type="text" class="form-control" id="mapInput">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="addplaceBtn">Let's Roll</button>
+                    <div class="pac-card" id="pac-card">
+                        <div>
+                          <div id="title">
+                            Autocomplete search
+                          </div>
+                          <div id="type-selector" class="pac-controls">
+                            <input type="radio" name="type" id="changetype-all" checked="checked">
+                            <label for="changetype-all">All</label>
+                  
+                            <input type="radio" name="type" id="changetype-establishment">
+                            <label for="changetype-establishment">Establishments</label>
+                  
+                            <input type="radio" name="type" id="changetype-address">
+                            <label for="changetype-address">Addresses</label>
+                  
+                            <input type="radio" name="type" id="changetype-geocode">
+                            <label for="changetype-geocode">Geocodes</label>
+                          </div>
+                          <div id="strict-bounds-selector" class="pac-controls">
+                            <input type="checkbox" id="use-strict-bounds" value="">
+                            <label for="use-strict-bounds">Need to Remove</label>
+                          </div>
+                        </div>
+                        <div id="pac-container">
+                          <input id="pac-input" type="text"
+                              placeholder="Enter a location">
+                        </div>
+                      </div>
+                      <div id="map"></div>
+                      <div id="infowindow-content">
+                        <img src="" width="16" height="16" id="place-icon">
+                        <span id="place-name"  class="title"></span><br>
+                        <span id="place-address"></span>
+                      </div>
+                  
                     </from>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3"></div>
             <form>
-        </div>
+        
     </div>
     <!--End Form-->
     <br>
@@ -66,8 +96,11 @@
             <script type="text/javascript" src="assets/javascript/map.js"></script>
 
             <!-- google maps with API key 'Melissa's -->
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&callback=myMap">
-            </script>
+            <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&callback=myMap">
+            </script> -->
+            <!-- Search for a place and google map -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&libraries=places&callback=initMap"
+        async defer></script>
 
             <!-- Google AJAX with JQUERY -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
