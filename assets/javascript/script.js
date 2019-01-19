@@ -75,3 +75,36 @@
 //       map.fitBounds(bounds);
 //     });
 //   }
+
+
+
+
+var searches = [""];
+
+  $("#addplaceBtn").on("click", function(event) {
+    event.preventDefault();
+    var place = $("#mapInput").val().trim();
+      
+    searches.push(place);
+
+    updateSearches();
+
+  });
+
+//make these clickable somehow
+  function updateSearches() {
+
+    $("#placesSearched").empty();
+    
+    for (var i = 0; i < searches.length; i++) {
+    
+     var newSearch = $("<p>");
+    
+     newSearch.text(searches[i]);
+        
+     $("#placesSearched").append(newSearch);
+    }
+    }
+
+
+  
