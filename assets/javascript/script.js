@@ -82,12 +82,17 @@
 var searches = [""];
 
   $("#addplaceBtn").on("click", function(event) {
+    
     event.preventDefault();
     var place = $("#mapInput").val().trim();
+    $("#mapInput").empty();
+    
       
     searches.push(place);
 
     updateSearches();
+    $("#mapInput").empty();
+  
 
   });
 
@@ -96,15 +101,18 @@ var searches = [""];
 
     $("#placesSearched").empty();
     
-    for (var i = 0; i < searches.length; i++) {
+    
+    for (var i = 1; i < searches.length; i++) {
     
      var newSearch = $("<p>");
+     newSearch.addClass("btn btn-secondary");
     
      newSearch.text(searches[i]);
         
      $("#placesSearched").append(newSearch);
+     
+    
     }
     }
-
-
+   
   
