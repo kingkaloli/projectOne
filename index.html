@@ -1,119 +1,105 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Neighborhood Search </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-
+<title>Neighborhood Search </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
 </head>
-
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-4">
-                <h1 class="text-center">Neighborhood Search</h1>
-            </h1>
-        </div>
-    </div>
-    <br><br>
-    <!--Begin Form-->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-6">
-                <form>
-                    <div class="pac-card" id="pac-card">
-                        <div>
-                          <div id="title">
-                            Autocomplete search
-                          </div>
-                          <div id="type-selector" class="pac-controls">
-                            <input type="radio" name="type" id="changetype-all" checked="checked">
-                            <label for="changetype-all">All</label>
-                  
-                            <input type="radio" name="type" id="changetype-establishment">
-                            <label for="changetype-establishment">Establishments</label>
-                  
-                            <input type="radio" name="type" id="changetype-address">
-                            <label for="changetype-address">Addresses</label>
-                  
-                            <input type="radio" name="type" id="changetype-geocode">
-                            <label for="changetype-geocode">Geocodes</label>
-                          </div>
-                          <div id="strict-bounds-selector" class="pac-controls">
-                            <input type="checkbox" id="use-strict-bounds" value="">
-                            <label for="use-strict-bounds">Need to Remove</label>
-                          </div>
-                        </div>
-                        <div id="pac-container">
-                          <input id="pac-input" type="text"
-                              placeholder="Enter a location">
-                        </div>
-                      </div>
-                      <div id="map"></div>
-                      <div id="infowindow-content">
-                        <img src="" width="16" height="16" id="place-icon">
-                        <span id="place-name"  class="title"></span><br>
-                        <span id="place-address"></span>
-                      </div>
-                  
-                    </from>
-            </div>
-        </div>
-        <div class="col-md-3"></div>
-            <form>
-        
-    </div>
-    <!--End Form-->
-    <br>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <h3>Places Searched here</h3>
-                <div id="placesSearched"></div>
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-center">Google Maps Here</h3>
-                <div id="map">
+<div class="jumbotron">
+<div class="container">
+<h1 class="display-4">
+<h1 class="text-center">Neighborhood Search</h1>
+</h1>
+</div>
+</div>
+<br><br>
+<!--Begin Form-->
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+<form>
+<div class="form-group">
+<label for="three">Seach Neighborhood</label>
+<div class="pac-card" id="pac-card">
+<div>
+<div id="title">
+Autocomplete search
+</div>
+<div id="type-selector" class="pac-controls">
+<input type="radio" name="type" id="changetype-all" checked="checked">
+<label for="changetype-all">All</label>
+<input type="radio" name="type" id="changetype-establishment">
+<label for="changetype-establishment">Establishments</label>
+<input type="radio" name="type" id="changetype-address">
+<label for="changetype-address">Addresses</label>
+<input type="radio" name="type" id="changetype-geocode">
+<label for="changetype-geocode">Geocodes</label>
+</div>
+<div id="strict-bounds-selector" class="pac-controls">
+<input type="checkbox" id="use-strict-bounds" value="">
+<label for="use-strict-bounds">Strict Bounds</label>
+</div>
+</div>
+<div id="pac-container">
+<input id="pac-input" type="text"
+placeholder="Enter a location">
+</div>
+</div>
+<div id="map"></div>
+<div id="infowindow-content">
+<img src="" width="16" height="16" id="place-icon">
+<span id="place-name" class="title"></span><br>
+<span id="place-address"></span>
+</div>
+</div>
+<button type="submit" class="btn btn-primary" id="addplaceBtn">Let's Roll</button>
+</from>
+</div>
+</div>
+<div class="col-md-3">
+<form>
+</div>
+</div>
+<!--End Form-->
+<br>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h3>Places Searched here</h3>
+<div id="placesSearched"></div>
+</div>
+<div class="col-md-6">
+<h3 class="text-center">Google Maps Here</h3>
+<div id="map">
+</div>
+</div>
+<div class="col-md-3">
+<h3>Faves here</h3>
+<div id="favPlaces"></div>
+</div>
+</div>
+</div>
 
-                </div>
-            </div>
-            <div class="col-md-3">
-                <h3>Faves here</h3>
-                <div id="favPlaces"></div>
-            </div>
-        </div>
-    </div>
-
-
-            <!-- <script src="assets/javascript/app.js"></script> -->
-            <!-- our javascript -->
-            <script type="text/javascript" src="assets/javascript/map.js"></script>
-
-            <!-- google maps with API key 'Melissa's -->
-            <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&callback=myMap">
-            </script> -->
-            <!-- Search for a place and google map -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&libraries=places&callback=initMap"
-        async defer></script>
-
-            <!-- Google AJAX with JQUERY -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-            <!-- AJAX with Jquery 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-            <!-- <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script> -->
-
-            <!-- moment's  -->
-            <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-            <!-- 'initAutocomplete' callback for google map's API
-         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDisbZ_pX0IHnbcp-bgKa8jQu5OAbHSX6o&libraries=places&callback=initAutocomplete"
-         async defer></script> -->
+<!-- <script src="assets/javascript/app.js"></script> -->
+<!-- our javascript -->
+<script type="text/javascript" src="assets/javascript/map.js"></script>
+<!-- google maps with API key 'Melissa's -->
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&callback=myMap">
+</script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgKXioFMPZh0wujY_Mn3F6To_KpMlYd2c&libraries=places&callback=initMap"
+async defer></script>
+<!-- Google AJAX with JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- AJAX with Jquery 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script> -->
+<!-- moment's -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </body>
-
 </html>
