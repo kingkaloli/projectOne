@@ -1,14 +1,18 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.8688, lng: 151.2195},
+    center: {
+      lat: -33.8688,
+      lng: 151.2195
+    },
     zoom: 13
   });
   var card = document.getElementById('pac-card');
   var input = document.getElementById('pac-input');
   var types = document.getElementById('type-selector');
+  // possibly remove this var strictBounds
   var strictBounds = document.getElementById('strict-bounds-selector');
 
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+  // map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
   var autocomplete = new google.maps.places.Autocomplete(input);
 
@@ -19,7 +23,7 @@ function initMap() {
 
   // Set the data fields to return when the user selects a place.
   autocomplete.setFields(
-      ['address_components', 'geometry', 'icon', 'name']);
+    ['address_components', 'geometry', 'icon', 'name']);
 
   var infowindow = new google.maps.InfoWindow();
   var infowindowContent = document.getElementById('infowindow-content');
@@ -29,7 +33,7 @@ function initMap() {
     anchorPoint: new google.maps.Point(0, -29)
   });
 
-  autocomplete.addListener('place_changed', function() {
+  autocomplete.addListener('place_changed', function () {
     infowindow.close();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
@@ -45,7 +49,7 @@ function initMap() {
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(17);  // Why 17? Because it looks good.
+      map.setZoom(17); // Why 17? Because it looks good.
     }
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
@@ -69,7 +73,7 @@ function initMap() {
   // Autocomplete.
   function setupClickListener(id, types) {
     var radioButton = document.getElementById(id);
-    radioButton.addEventListener('click', function() {
+    radioButton.addEventListener('click', function () {
       autocomplete.setTypes(types);
     });
   }
@@ -80,8 +84,10 @@ function initMap() {
   setupClickListener('changetype-geocode', ['geocode']);
 
   document.getElementById('use-strict-bounds')
-      .addEventListener('click', function() {
-        console.log('Checkbox clicked! New state=' + this.checked);
-        autocomplete.setOptions({strictBounds: this.checked});
+    .addEventListener('click', function () {
+      console.log('Checkbox clicked! New state=' + this.checked);
+      autocomplete.setOptions({
+        strictBounds: this.checked
       });
+    });
 }
