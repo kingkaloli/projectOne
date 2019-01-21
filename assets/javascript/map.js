@@ -1,16 +1,19 @@
 function initMap() {
+  
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      lat: -33.8688,
-      lng: 151.2195
+      lat: 38.8339,
+      lng: -104.8214
     },
     zoom: 13
   });
+ 
+    
   var card = document.getElementById('pac-card');
   var input = document.getElementById('pac-input');
   var types = document.getElementById('type-selector');
   // possibly remove this var strictBounds
-  var strictBounds = document.getElementById('strict-bounds-selector');
+  // var strictBounds = document.getElementById('strict-bounds-selector');
 
   // map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
@@ -23,7 +26,7 @@ function initMap() {
 
   // Set the data fields to return when the user selects a place.
   autocomplete.setFields(
-    ['address_components', 'geometry', 'icon', 'name']);
+    ['address_components', 'geometry', 'name']);
 
   var infowindow = new google.maps.InfoWindow();
   var infowindowContent = document.getElementById('infowindow-content');
@@ -83,11 +86,10 @@ function initMap() {
   setupClickListener('changetype-establishment', ['establishment']);
   setupClickListener('changetype-geocode', ['geocode']);
 
-  document.getElementById('use-strict-bounds')
-    .addEventListener('click', function () {
-      console.log('Checkbox clicked! New state=' + this.checked);
+  // document.getElementById('use-strict-bounds')
+  //   .addEventListener('click', function () {
+  //     console.log('Checkbox clicked! New state=' + this.checked);
       autocomplete.setOptions({
         strictBounds: this.checked
       });
-    });
 }
