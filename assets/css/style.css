@@ -1,4 +1,15 @@
-   #map {
+.jumbotron{
+  background-color: aqua;
+  color: #FFFFFF;
+
+  /*background-color:none !important;*/
+  }
+body {
+
+  background-image: url("white-waves.png");
+}
+
+#map {
      height: 400px;
      /* The height is 400 pixels */
      width: 100%;
