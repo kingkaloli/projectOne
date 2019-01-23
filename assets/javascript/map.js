@@ -95,6 +95,8 @@ function initMap() {
         strictBounds: this.checked
       });
 }
+
+//-this is Giffy area-//
 $(function () {
 
   $("button", ).on("click", function () {
