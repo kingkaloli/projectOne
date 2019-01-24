@@ -115,7 +115,7 @@ $("#add-travel").on("click", function (event) {
   console.log(search);
   event.preventDefault();
   var a = $("<button>").html(search);
-  a.addClass("btn btn-secondary");
+  a.addClass("btn btn-primary");
   a.val(search);
   $("#buttonArea").append(a);
   console.log(a);

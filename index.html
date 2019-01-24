@@ -12,12 +12,20 @@
 </head>
 
 <body>
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Fluid jumbotron</h1>
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                        <h1 class="text-center">Go Explore</h1>
+                </div>
+              </div>
+
     <!--Begin Form-->
     <div class="container">
         <div class="row">
@@ -26,8 +34,15 @@
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
+
                         <label for="three">Seach by location</label>
                         <div class="pac-card" id="pac-card" >
+
+                        <div class="search">
+                        <label for="three">Search a place</label>
+                    </div>
+                        <div class="pac-card" id="pac-card">
+
                             <div>
                                 <div id="title">
                                     Search for location
@@ -71,10 +86,24 @@
         <div class="row">
             <div class="col-md-3">
 
+
+
+                <form id="travel-form">
+                        <div id="todaySearch">
+                          <label for="travel-input">
+                          
+                          </label>
+                        </div>
+                        <input type="text" id="travel-input">
+                        <br>
+                        <br>
+                        <input id="add-travel" class="btn btn-primary" type="submit" value="Add a place Gif Below ">
+                      </form>
+
             </div>
 
             <div class="col-md-6">
-                <h3 class="text-center">Google Maps Here</h3>
+          
                 <div id="map"></div>
 
             </div>
@@ -103,6 +132,20 @@
 
     </div>
     <div class="col-md-4"></div>
+
+
+  </div>
+</div>
+</div>
+<div id=wrapper>
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <div class=placesIlove>
+      <h2> Click to view your Giff</h2>
+
     </div>
     </div>
     </div>

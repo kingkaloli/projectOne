@@ -1,5 +1,5 @@
 .jumbotron{
-  background-color: aqua;
+  background-color: #45A5F5;
   color: #FFFFFF;
 
   /*background-color:none !important;*/
@@ -8,6 +8,33 @@ body {
 
   background-image: url("white-waves.png");
 }
+
+h1  {
+
+  color: #FBBC05;
+  font-family: Futura PT;
+  font-size: 80px;
+}
+
+h2  {
+
+  color: #FBBC05;
+  font-family: Futura PT;
+  font-size: 40px;
+}
+
+.search {
+  color: #FBBC05;
+  font-family: Futura PT;
+  font-size: 40px;
+
+}
+button {
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  
+  }
 
 #map {
      height: 400px;
