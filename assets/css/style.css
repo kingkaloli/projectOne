@@ -17,7 +17,7 @@ h1  {
 }
 
 h2  {
-
+  font-family: Futura PT;
   color: #FBBC05;
   font-family: Futura PT;
   font-size: 40px;
@@ -44,10 +44,17 @@ button {
    }
 
    #description {
-    font-family: Roboto;
+   
     font-size: 15px;
     font-weight: 300;
   }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+ 
 
   #infowindow-content .title {
     font-weight: bold;
@@ -57,18 +64,15 @@ button {
     display: none;
   }
 
-  /* #map #infowindow-content {
-    display: inline;
-  } */
-
   .pac-card {
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 0 0;
     border-radius: 2px 0 0 2px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    font-family: Roboto;
+   
+    
   }
 
   #pac-container {
@@ -82,14 +86,14 @@ button {
   }
 
   .pac-controls label {
-    font-family: Roboto;
+    
     font-size: 13px;
     font-weight: 300;
   }
 
   #pac-input {
     background-color: #fff;
-    font-family: Roboto;
+    
     font-size: 15px;
     font-weight: 300;
     margin-left: 12px;
@@ -105,9 +109,10 @@ button {
   #title {
     color: #fff;
     background-color: #4d90fe;
-    font-size: 10px;
+    font-size: 25px;
     font-weight: 500;
     padding: 6px 12px;
   }
-  
-  
+  #target {
+    width: 345px;
+  }
