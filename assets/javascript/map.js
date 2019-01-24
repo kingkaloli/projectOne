@@ -103,7 +103,7 @@ $(function () {
       var type = $(this).attr("travel-place");
       $("#imageArea").empty();
 
-      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + type + '&api_key=1UpFUCsNhpc1IK7JBMtLDBOu3OqZ7zPP&limit=5&g';
+      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + type + '&api_key=1UpFUCsNhpc1IK7JBMtLDBOu3OqZ7zPP&limit=2&g';
       console.log(queryURL);
       $.ajax({
               url: queryURL,
@@ -142,7 +142,7 @@ $("#add-travel").on("click", function (event) {
   $(a).on("click", function (queryURL) {
       $("#imageArea").empty();
 
-      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=1UpFUCsNhpc1IK7JBMtLDBOu3OqZ7zPP&limit=5&g';
+      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=1UpFUCsNhpc1IK7JBMtLDBOu3OqZ7zPP&limit=2&g';
 
       console.log(queryURL);
       $.ajax({
