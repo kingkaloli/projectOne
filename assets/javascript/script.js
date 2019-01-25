@@ -1,4 +1,4 @@
-$(function(){
+
 
     $("button", ).on("click", function () {
         var type = $(this).attr("travel-place");
@@ -30,7 +30,7 @@ $(function(){
 
             });
     });
-});
+
 $("#add-travel").on("click", function (event) {
     var search = $("#travel-input").val().trim();
     console.log(search);
