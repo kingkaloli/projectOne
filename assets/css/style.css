@@ -16,6 +16,10 @@ h1  {
   font-size: 80px;
 }
 
+#wrapper {
+ padding: 30px;
+}
+
 h2  {
   font-family: Futura PT;
   color: #FBBC05;
@@ -36,12 +40,11 @@ h3  {
   font-size: 40px;
 
 }
-button {
-  margin-left: 5px;
-  margin-top: 5px;
-  padding: 5px;
-  
-  }
+.btn-secondary {
+  background: #0099cc;
+  color: #ffffff;
+  padding: 4px;
+}
 
 #map {
      height: 400px;
